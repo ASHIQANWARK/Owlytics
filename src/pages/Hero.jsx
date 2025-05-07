@@ -21,7 +21,7 @@ const HeroSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-center px-6 py-20 overflow-hidden">
+    <section className="relative w-full min-h-screen flex flex-col justify-center items-center px-4 py-20 overflow-hidden">
       {/* Background Video */}
       <video
         src={hero}
@@ -29,7 +29,7 @@ const HeroSection = () => {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
       />
 
       {/* Hero Content */}
@@ -62,7 +62,7 @@ const HeroSection = () => {
             variants={itemVariants}
           >
             <a
-              href="https://forms.gle/e4g34MmZUE6RkVjN9" 
+              href="https://forms.gle/e4g34MmZUE6RkVjN9"
               target="_blank"
               rel="noopener noreferrer"
             >

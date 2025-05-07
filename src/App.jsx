@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import SolutionsSection from './pages/Solutions';
 import About from './pages/About';
+import PrivacyPolicy from './pages/Privacypolicy';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/solution" element={<SolutionsSection />} />
         <Route path="/about" element={<About />} />
+        <Route path="/privacypolicy"  element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
     </Router>

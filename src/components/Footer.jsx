@@ -1,21 +1,18 @@
 import React from "react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedin,
-} from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
 
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-[#061428] to-[#0b1c3a] text-white">
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
-        {/* Column 1: Text Logo */}
+        {/* Column 1: Logo */}
         <div className="flex justify-center md:justify-start">
           <h1 className="text-2xl font-bold text-white tracking-wide">Owlytics</h1>
         </div>
 
-        {/* Column 2: Address, Email, Privacy Policy & Help Centre */}
+        {/* Column 2: Contact + Links */}
         <div className="text-center md:text-left">
           <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
           <p className="text-gray-300">
@@ -25,31 +22,26 @@ const Footer = () => {
           <p className="text-gray-300 mt-2">
             Email:{" "}
             <a
-              href="mailto:ceo@incubenation.com"
+              href="mailto:contact@owlytics.co"
               className="text-[#ffab00] hover:underline"
             >
-              contact@owlytics.com
+              contact@owlytics.co
             </a>
           </p>
           <p className="text-gray-300 mt-2">
-            <a
-              href="/privacy-policy"
-              className="text-[#ffab00] hover:underline"
-            >
+            <Link to="/privacypolicy" className="text-[#ffab00] hover:underline">
               Privacy Policy
-            </a>{" "}
+            </Link>{" "}
             |{" "}
-            <a href="/help-centre" className="text-[#ffab00] hover:underline">
+            <Link to="/contact" className="text-[#ffab00] hover:underline">
               Help Centre
-            </a>
+            </Link>
           </p>
         </div>
 
-        {/* Column 3: Social Media */}
+        {/* Column 3: Socials */}
         <div className="flex flex-col items-center mt-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">
-            Follow Us
-          </h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">Follow Us</h3>
           <div className="flex space-x-6">
             <a
               href="#"
@@ -69,7 +61,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              aria-label="x"
+              aria-label="X"
               className="text-[#2bf00c] transition duration-300 hover:scale-110 hover:opacity-80"
             >
               <FaX size={24} />
@@ -78,13 +70,15 @@ const Footer = () => {
               href="https://www.linkedin.com/company/incubenation"
               aria-label="LinkedIn"
               className="text-[#1358f9] transition duration-300 hover:scale-110 hover:opacity-80"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaLinkedin size={24} />
             </a>
           </div>
         </div>
 
-        {/* Column 4: Google Maps Location */}
+        {/* Column 4: Map */}
         <div className="w-full flex justify-center md:justify-end">
           <iframe
             title="Google Maps"
@@ -98,10 +92,10 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright Section */}
+      {/* Copyright */}
       <div className="bg-gray-950 py-4 text-center">
         <p className="text-gray-400 text-sm">
-          &copy; 2025 Ique Ventures. All rights reserved.
+          &copy; 2025 iQue Ventures. All rights reserved.
         </p>
       </div>
     </footer>

@@ -32,8 +32,8 @@ const About = () => {
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-6 py-20">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          Owlytics is the trusted market research partner for ambitious startups
-          and growth-focused businesses.
+          <span className="text-[#ffab00]">Owlytics</span> is the trusted market
+          research partner for ambitious startups and growth-focused businesses.
         </h2>
         <p className="text-lg text-gray-700 mb-12 max-w-3xl">
           We work with founders, product teams, and marketing leaders to help
