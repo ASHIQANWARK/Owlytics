@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   FaRocket,
   FaHandshake,
@@ -43,9 +44,15 @@ const cardVariants = {
   }),
 };
 
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
 const OwlyticsSection = () => {
   return (
-    <section className="bg-gradient-to-r from-gray-100  to-gray-100 py-20 px-6 md:px-12">
+    <section className="bg-gradient-to-r from-gray-100 to-gray-100 py-20 px-6 md:px-12">
+      {/* Section Heading */}
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -56,6 +63,7 @@ const OwlyticsSection = () => {
         Why Work with Owlytics
       </motion.h2>
 
+      {/* Features Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
         {cardData.map((card, i) => (
           <motion.div
@@ -76,24 +84,26 @@ const OwlyticsSection = () => {
         ))}
       </div>
 
+      {/* CTA Button */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
+        className="flex flex-col sm:flex-row gap-4 justify-center mt-12"
+        initial="hidden"
+        whileInView="visible"
         viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-        className="text-center mt-12"
+        variants={itemVariants}
       >
-        <a
-          href="https://forms.gle/e4g34MmZUE6RkVjN9" // 🔁 Replace with your actual Google Form URL
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="bg-[#00203c] hover:bg-[#00203c] text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300">
+        <Link to="/contactform">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            className="bg-white text-[#00203c] font-semibold px-6 py-3 rounded-md transition duration-300 shadow-md w-full sm:w-auto"
+          >
             Get a Quote
-          </button>
-        </a>
+          </motion.button>
+        </Link>
       </motion.div>
 
+      {/* Testimonial */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

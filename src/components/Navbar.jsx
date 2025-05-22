@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/images/Files/Owlytics by Ique RGB.png"; // Adjust the path based on your folder structure
+import logo from "../assets/images/Files/Owlytics by Ique White.png"; // Adjust the path based on your folder structure
 
 
 const Navbar = () => {

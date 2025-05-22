@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
-import logo from "../assets/images/Files/Owlytics by Ique RGB.png"
+import logo from "../assets/images/Files/Owlytics by Ique White.png"
 
 const Footer = () => {
   return (
