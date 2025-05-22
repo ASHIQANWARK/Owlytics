@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import hero from "../assets/images/Home Page Animation.mp4";
 
@@ -57,36 +57,33 @@ const HeroSection = () => {
             win.
           </motion.p>
 
+          {/* Buttons */}
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             variants={itemVariants}
           >
-            <a
-              href="https://forms.gle/e4g34MmZUE6RkVjN9"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link to="/contactform">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
-                className="bg-white text-[#00203c] font-semibold px-6 py-3 rounded-md transition duration-300 shadow-md"
+                className="bg-white text-[#00203c] font-semibold px-6 py-3 rounded-md transition duration-300 shadow-md w-full sm:w-auto"
               >
                 Get a Quote
               </motion.button>
-            </a>
+            </Link>
 
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
-              onClick={() => navigate("/contact")} // Navigate to contact page
-              className="border border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-[#0a2540] transition duration-300 shadow-md"
+              onClick={() => navigate("/contact")}
+              className="border border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-[#0a2540] transition duration-300 shadow-md w-full sm:w-auto"
             >
               Explore Service
             </motion.button>
           </motion.div>
         </motion.div>
 
-        {/* Right: Placeholder for future image or animation */}
+        {/* Right: Placeholder (future image or animation) */}
         <div className="lg:w-1/2 hidden lg:block" />
       </motion.div>
     </section>

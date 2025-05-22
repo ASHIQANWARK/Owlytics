@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import logo from "../assets/images/Files/Owlytics by Ique RGB.png"; // Adjust the path based on your folder structure
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,8 +42,7 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Solutions", path: "/solution" },
     { name: "About", path: "/about" },
-    {name: "Contact", path:"/contact", },
-   
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -53,7 +54,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="text-2xl font-bold text-white">Owlytics</div>
+          <Link to="/">
+            <img src={logo} alt="Owlytics Logo" className="h-10 w-auto" />
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -76,8 +79,6 @@ const Navbar = () => {
                 </Link>
               )
             )}
-
-            
           </div>
 
           {/* Mobile Menu Toggle */}

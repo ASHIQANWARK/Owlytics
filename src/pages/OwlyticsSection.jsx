@@ -114,7 +114,7 @@ const OwlyticsSection = () => {
           "Owlytics empowered us with deep insights into our market, which
           helped us pivot our business strategy."
         </blockquote>
-        <p className="mt-2 font-semibold text-[#00203c]">CLIENT NAME</p>
+        <p className="mt-2 font-semibold text-[#00203c]">Hashir</p>
       </motion.div>
     </section>
   );

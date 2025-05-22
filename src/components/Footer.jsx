@@ -2,15 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
+import logo from "../assets/images/Files/Owlytics by Ique RGB.png"
 
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-[#061428] to-[#0b1c3a] text-white">
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Column 1: Logo */}
-        <div className="flex justify-center md:justify-start">
-          <h1 className="text-2xl font-bold text-white tracking-wide">Owlytics</h1>
-        </div>
+        <Link to="/">
+          <img src={logo} alt="Owlytics Logo" className="h-10 w-auto" />
+        </Link>
 
         {/* Column 2: Contact + Links */}
         <div className="text-center md:text-left">
@@ -29,7 +30,10 @@ const Footer = () => {
             </a>
           </p>
           <p className="text-gray-300 mt-2">
-            <Link to="/privacypolicy" className="text-[#ffab00] hover:underline">
+            <Link
+              to="/privacypolicy"
+              className="text-[#ffab00] hover:underline"
+            >
               Privacy Policy
             </Link>{" "}
             |{" "}
@@ -41,7 +45,9 @@ const Footer = () => {
 
         {/* Column 3: Socials */}
         <div className="flex flex-col items-center mt-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">Follow Us</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            Follow Us
+          </h3>
           <div className="flex space-x-6">
             <a
               href="#"
